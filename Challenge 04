@@ -10,7 +10,6 @@ highest_guess = 50
 print('Hello, would you like to play a game?')
 game_decision = (input())
 while game_decision.lower('yes'):
-  if game_decision == 'yes':
     print(f'Guess a number between {lowest_guess} and {highest_guess}:')
     guess = int(input())
     while guess != correct_number:
