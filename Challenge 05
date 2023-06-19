@@ -1,0 +1,13 @@
+gravity = 9.8
+
+def falling_distance(time_of_fall):
+    distance = 0.5 * gravity * (time_of_fall*2)
+    return distance 
+def main():
+    print("Seconds/distance")
+    print(" ")
+    for sec in range(1,22):
+        print(sec, "/t", falling_distance(sec))
+
+main()
+
