@@ -1,0 +1,32 @@
+# Initialize the variables 
+correct_number = 41
+lower_num = correct_number - 5
+upper_num = correct_number + 5
+counter = 0
+lowest_guess = 1
+highest_guess = 50
+
+
+print('Hello, would you like to play a game?')
+game_decision = (input())
+while game_decision.lower('yes'):
+  if game_decision == 'yes':
+    print(f'Guess a number between {lowest_guess} and {highest_guess}:')
+    guess = int(input())
+    while guess != correct_number:
+      counter += 1
+      if lower_num <= guess and upper_num >= guess:
+        print("Your guess is within 5 digits of the correct number. Try again.")
+      elif guess < lowest_guess or guess > 50:
+        print(f'Error. Please choose a number within {lowest_guess} and {highest_guess}')
+      else:
+        print('That is not the correct number. Try again.')
+      guess = int(input())
+      
+    else:
+      counter += 1
+      print('Congratulations. You have guessed the correct number.')
+      print(f'The correct number is {correct_number}')
+      print(f'It took you {counter} tries.')
+  else:
+      print('Goodbye.')
